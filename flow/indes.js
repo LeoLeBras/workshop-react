@@ -5,5 +5,5 @@ const foo = (value: number): number => value * 2
 foo(2)
 
 // Wrong 💩
-const foo = (value: number): number => value * 2
-foo('hello')
+const bar = (value: number): number => value * 2
+bar('hello')
