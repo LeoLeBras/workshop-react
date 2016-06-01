@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/LeoLeBras/workshop-react.git"
   },
+  "license": "MIT",
   "author": "Léo LE BRAS <leo.lebrasf@gmail.com> (http://github.com/LeoLebras)",
   "devDependencies": {
     "babel-core": "^6.6.5",
