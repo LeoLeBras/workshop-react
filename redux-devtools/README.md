@@ -1,5 +1,5 @@
-# React Hot
- Hot reloading React components and error handling !
+# Redux DevTools
+Redux DevTools, a powerful tool for debugging an application's state.
 
 ## Make the awesome
 ```shell
@@ -8,5 +8,4 @@ $ npm start
 ```
 
 ### How to use
-Now edit ```src/App.js```.
-Your changes will appear without reloading the browser. :rocket:
+Now, add a todo and see your changes appear in the Redux DevTools 🍻

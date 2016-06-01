@@ -1,6 +1,6 @@
 {
   "name": "react-hot",
-  "description": "Hot reloading React components and error handling !",
+  "description": "Redux DevTools, a powerful tool for debugging an application's state",
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js"
