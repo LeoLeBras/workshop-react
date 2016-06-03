@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { addTodo, removeTodo, markTodo } from '../store/modules/todos'
+import { addTodo, removeTodo, completeTodo } from '../store/modules/todos'
 
 class TodosContainer extends Component {
   static propTypes = {
@@ -16,7 +16,7 @@ class TodosContainer extends Component {
   }
 
   render() {
-    const { todos, removeTodo, markTodo } = this.props
+    const { todos, removeTodo, completeTodo } = this.props
     return (
       <div>
         <h1>Todos</h1>
@@ -27,7 +27,9 @@ class TodosContainer extends Component {
         <ul>
           { todos.map((todo, index) => (
             <li key={index}>
-              <span onClick={() => markTodo(index)} style={{ textDecoration: todo.marked ? 'line-through' : 'none' }}>{todo.name}</span>
+              <span onClick={() => completeTodo(index)} style={{
+                textDecoration: todo.completed ? 'line-through' : 'none'
+              }}>{todo.name}</span>
               <button onClick={() => removeTodo(index)}>Remove</button>
             </li>
           )) }
@@ -42,5 +44,5 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, {
-  addTodo, removeTodo, markTodo
+  addTodo, removeTodo, completeTodo
 })(TodosContainer)

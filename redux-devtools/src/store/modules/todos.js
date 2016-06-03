@@ -1,25 +1,28 @@
 const ADD_TODO = 'ADD_TODO'
 const REMOVE_TODO = 'REMOVE_TODO'
-const MARK_TODO = 'MARK_TODO'
+const COMPLETE_TODO = 'COMPLETE_TODO'
 
 export function todos(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return [
         ...state,
-        { name: action.todo, marked: false },
+        { name: action.todo, completed: false },
       ]
-    case REMOVE_TODO:
+    case REMOVE_TODO: {
+      const { index } = action
       return [
-        ...state.slice(0, action.index),
-        ...state.slice(action.index + 1),
+        ...state.slice(0, index),
+        ...state.slice(index + 1),
       ]
-    case MARK_TODO:
-      const currentTodo = state[action.index]
+    }
+    case COMPLETE_TODO:
+      const { index } = action
+      const currentTodo = state[index]
       return [
-        ...state.slice(0, action.index),
-        { ...currentTodo, marked: !currentTodo.marked },
-        ...state.slice(action.index + 1),
+        ...state.slice(0, index),
+        { ...currentTodo, completed: !currentTodo.completed },
+        ...state.slice(index + 1),
       ]
     default:
       return state
@@ -36,7 +39,7 @@ export const removeTodo = (index) => ({
   index
 })
 
-export const markTodo = (index) => ({
-  type: MARK_TODO,
+export const completeTodo = (index) => ({
+  type: COMPLETE_TODO,
   index
 })
