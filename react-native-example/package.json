@@ -1,0 +1,18 @@
+{
+  "name": "Example React Native mobile app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeoLeBras/workshop-react.git"
+  },
+  "license": "MIT",
+  "author": "Léo LE BRAS <leo.lebrasf@gmail.com> (http://github.com/LeoLebras)",
+  "dependencies": {
+    "react": "15.0.2",
+    "react-native": "^0.26.3"
+  }
+}
