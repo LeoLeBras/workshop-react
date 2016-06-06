@@ -1,0 +1,32 @@
+[ignore]
+.*/node_modules/react/.*
+.*/node_modules/fbjs/.*
+
+[include]
+./src/
+
+[libs]
+./interfaces/
+
+[options]
+module.system=haste
+esproposal.class_instance_fields=enable
+esproposal.class_static_fields=enable
+
+module.name_mapper='.*\.\(scss\|css\)$' -> 'CSSModule'
+module.name_mapper='^@components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^@components$' -> '<PROJECT_ROOT>/src/components'
+module.name_mapper='^@utils\/\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'
+module.name_mapper='^@utils$' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='^@layouts\/\(.*\)$' -> '<PROJECT_ROOT>/src/layouts/\1'
+module.name_mapper='^@layouts$' -> '<PROJECT_ROOT>/src/layouts'
+module.name_mapper='^@containers\/\(.*\)$' -> '<PROJECT_ROOT>/src/containers/\1'
+module.name_mapper='^@containers$' -> '<PROJECT_ROOT>/src/containers'
+module.name_mapper='^@routes\/\(.*\)$' -> '<PROJECT_ROOT>/src/routes/\1'
+module.name_mapper='^@routes$' -> '<PROJECT_ROOT>/src/routes'
+module.name_mapper='^@store\/\(.*\)$' -> '<PROJECT_ROOT>/src/store/\1'
+module.name_mapper='^@store$' -> '<PROJECT_ROOT>/src/store'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe

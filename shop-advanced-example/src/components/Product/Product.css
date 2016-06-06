@@ -1,0 +1,11 @@
+/*
+ * <Product /> component style
+ */
+
+.button {
+  font-family: 'Open Sans';
+  padding: 4px 6px;
+  font-size: .75em;
+  background: #f0efef;
+  border: 1px solid grey;
+}
