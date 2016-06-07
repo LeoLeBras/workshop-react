@@ -6,7 +6,7 @@ import DevTools from './utils/DevTools'
 import TodosContainer from './containers/TodosContainer'
 
 const App = () => (
-  <Provider store={createStore(initialState)}>
+  <Provider store={createStore()}>
     <div>
       <TodosContainer />
       <DevTools />
